@@ -1,0 +1,90 @@
+<html>
+    <title>SAURAV</title>
+    <body>
+        <h1 data-text="SAURAV"> SAURAV</h1>
+        <img src="saurav.jpg" alt="" >
+        <div class="container">
+            <div class="button-container">
+                <span class="mask">SAURAV</span>
+                <button type="button"
+                name="HOVER"><a href="web/index.html">SAURAV</a> </button>
+            </div>
+        </div>
+    </body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;}
+        img{
+            --s: 250px;
+            --b: 8px;
+            --g: 15px;
+            --c: #ffff;
+
+            width: var(--s);
+            aspect-ratio: 1;
+            outline: calc(var(--s)/2) solid #0009;
+            outline-offset: calc(var(--s)/-2);
+            cursor: pointer;
+            transition: 0.7s;
+        }
+        img:hover {
+            outline: var(--b) solid var(--c);
+            outline-offset: var(--g);
+        }
+        img{
+            border-radius: 50%;
+        }
+        body{
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            grid-auto-flow: column;
+            gap: 50px;
+            place-content: center;
+            place-items: center;
+            background: black;
+        }
+        h1{
+            font-family: 'Teko' , sans-serif;
+            text-transform: uppercase;
+            font-size: 8rem;
+            text-align: center;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            align-items: center;
+            margin: 0;
+            min-height: calc(100vh - 16px);
+            background-color: white;
+            background: black;
+            color: rgb(10, 10, 10);
+        }
+        h1:before{
+            content: attr(data-text);
+            position: absolute;
+            background: linear-gradient(#fbfcfb, #fff1ec, #f5fefd, #f5fefd, #fbfcfb);
+            -webkit-background-clip: text;
+            color: transparent;
+            background-size: 100% 90%;
+            clip-path: ellipse(120px 120px at -2.54% -9.25%);
+            line-height: 0.9;
+            animation: swing 5s infinite;
+            animation-direction: alternate;
+        }
+        @keyframes swing{
+            0%{
+                -webkit-clip-path: ellipse(120px 120px at -2.54% -9.25%)
+                clip-path: ellipse(120px 120px at 49.66% 64.36%);
+        }
+        50%{
+            -webkit-clip-path: ellipse(120px 120px at 49.66% 64.36%);
+            clip-path: ellipse(120px 120px at 49.66% 64.36%);
+        }
+        100%{
+            -webkit-clip-path: ellipse(120px 120px at 102.62% -1.61%);
+            clip-path:ellipse(120px 120px at 102.62% -1.61%);
+            }
+        }
+    </style>
+</html>
